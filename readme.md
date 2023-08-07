@@ -1,7 +1,6 @@
 
 
 
-
 # Preparatory Steps
 
 1. Install Vivado 2019.2.1
@@ -46,9 +45,9 @@
 # Simulation
 
 1. Generate switching activity file:
-- Simulation Settings -> Simulator Language = Verilog
-- Simulation tab -> `xsim.simulate.saif` -> Provide a filename: `*.saif`
-- Check `xsim.simulate.saif_all_signals`
+   - Simulation Settings -> Simulator Language = Verilog
+   - Simulation tab -> `xsim.simulate.saif` -> Provide a filename: `*.saif`
+   - Check `xsim.simulate.saif_all_signals`
 2. Run Behavioral Simulation
 
 # Synthesis & Implementation
@@ -60,9 +59,7 @@
    - Add Design Sources -> Add Files -> Add SAIF file generated during simulation
 
 3. Remove I/O power results
- - Synthesis Settings -> Options -> More Options
+   - Synthesis Settings -> Options -> More Options
    - Add line: `-mode out_of_context` 
 
 4. Run Implementation
-
-
