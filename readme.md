@@ -2,17 +2,19 @@
 This readme file contains information regarding the SourceCode repository and a detailed HOW-TO reproduce the simulation of the project work.
 
 Here is the hierarchy of RTL files in the repository `\source\rtl`:
-- npu_cu
-  - systolic_array
-    - pe_array
-      - pe_unit
-    - adder_tree_top
-      - adder_tree
-        - adder
-    - quantizer
-  - control_unit
-  - decoder
-  - bram_top
+npu_cu
+│
+├── systolic_array
+│   ├── pe_array
+│   │   └── pe_unit
+│   ├── adder_tree_top
+│   │   └── adder_tree
+│   │       └── adder
+│   └── quantizer
+│
+├── control_unit
+├── decoder
+└── bram_top
 
 Other files included are:
 - Testbench for a convolution layer `tb_npu_16` in `\source\tb`
