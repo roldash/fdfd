@@ -56,7 +56,7 @@
    - Add Constraints -> Add `/sources/constraints.xdc`
    
 2. Add SAIF file:
-   - Add Design Sources -> Add Files -> Add SAIF file generated during simulation
+   - Add Design Sources -> Add Files -> Add `*.saif` file generated during simulation
 
 3. Remove I/O power results
    - Synthesis Settings -> Options -> More Options
