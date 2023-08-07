@@ -1,19 +1,19 @@
+
+
+
+
 # Preparatory Steps
 
 1. Install Vivado 2019.2.1
 
-2. Open Vivado:
-   - Create Project
-   - Default Part window
+2. Create project:
    - Boards -> Zynq Ultrascale+ ZCU104 Evaluation board
 
-3. Add design sources:
-   - Add Directories -> add `/sources/rtl`
-
-4. Add simulation sources:
+3. Add sources:
+   - Add Design Sources -> Add Directories -> add `/sources/rtl`
    - Add Directories -> add `/sources/tb`
 
-5. To add IPs:
+5. Add IPs:
    - **DSP Macro:**
      - IP Catalog -> DSP48 Macro
      - Component Name: `xbip_dsp48_macro_0`
@@ -45,12 +45,11 @@
 
 # Simulation
 
-Generate switching activity file:
-1. Simulation Settings -> Simulator Language = Verilog
-2. Simulation tab -> `xsim.simulate.saif`
-3. Provide a filename: `*.saif`
-4. Check `xsim.simulate.saif_all_signals`
-5. Run Behavioral Simulation
+1. Generate switching activity file:
+- Simulation Settings -> Simulator Language = Verilog
+- Simulation tab -> `xsim.simulate.saif` -> Provide a filename: `*.saif`
+- Check `xsim.simulate.saif_all_signals`
+2. Run Behavioral Simulation
 
 # Synthesis & Implementation
 
@@ -60,7 +59,10 @@ Generate switching activity file:
 2. Add SAIF file:
    - Add Design Sources -> Add Files -> Add SAIF file generated during simulation
 
-3. Synthesis Settings -> Options -> More Options:
-   - Add line: `-mode out_of_context` (to remove I/O power results)
+3. Remove I/O power results
+ - Synthesis Settings -> Options -> More Options
+   - Add line: `-mode out_of_context` 
 
 4. Run Implementation
+
+
