@@ -1,7 +1,29 @@
+# **F-NPU MAC - A Systolic Array based Compute Unit for an FPGA - Neural Processing Unit**
+This readme file contains information regarding the SourceCode repository and a detailed HOW-TO reproduce the simulation of the project work.
 
+Here is the hierarchy of RTL files in the repository `\source\rtl`:
+- npu_cu
+  - systolic_array
+    - pe_array
+      - pe_unit
+    - adder_tree_top
+      - adder_tree
+        - adder
+    - quantizer
+  - control_unit
+  - decoder
+  - bram_top
 
+Other files included are:
+- Testbench for a convolution layer `tb_npu_16` in `\source\tb`
+- IP Macros in `\sources\ip`
+- SAIF files in `\sources\imports`
+- Constraints file `constraints.xdc` in `\source`
+- Memory file for the convolution layer `random.coe` in `\source`
 
-# Preparatory Steps
+Below are all the steps necessary to run the project files.
+
+## Preparatory Steps
 
 1. Install Vivado 2019.2.1
 
@@ -42,7 +64,7 @@
          - Uncheck Primitives Output Register
      - Other Options: Check Load Init File -> Add `/sources/random.coe`
 
-# Simulation
+## Simulation
 
 1. Generate switching activity file:
    - Simulation Settings -> Simulator Language = Verilog
@@ -50,7 +72,7 @@
    - Check `xsim.simulate.saif_all_signals`
 2. Run Behavioral Simulation
 
-# Synthesis & Implementation
+## Synthesis & Implementation
 
 1. Add constraints:
    - Add Constraints -> Add `/sources/constraints.xdc`
