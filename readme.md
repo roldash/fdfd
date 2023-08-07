@@ -3,17 +3,17 @@ This readme file contains information regarding the SourceCode repository and a 
 
 Here is the hierarchy of RTL files in the repository `\source\rtl`:
 npu_cu
-|-- systolic_array
-|   |-- pe_array
-|   |   `-- pe_unit
-|   |-- adder_tree_top
-|   |   `-- adder_tree
-|   |       `-- adder
-|   `-- quantizer
-|-- control_unit
-|-- decoder
-`-- bram_top
 
+    systolic_array
+        pe_array
+            pe_unit
+        adder_tree_top
+            adder_tree
+                adder
+        quantizer
+    control_unit
+    decoder
+    bram_top
 
 
 
